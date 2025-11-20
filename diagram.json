@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "author": "222.1 Роман Поздрань",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": 150.6,
+      "left": -246.8,
+      "attrs": { "color": "#eeefed" }
+    },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -290, "left": -23.2, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno1", "top": 144.6, "left": 249, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 272.75,
+      "left": 0,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": 154.24,
+      "left": 97.19,
+      "attrs": { "pixels": "16" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 241,
+      "left": -82.4,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 241,
+      "left": -120.8,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "keypad1:C1", "uno1:6", "blue", [ "v38.4", "h335.9" ] ],
+    [ "keypad1:R4", "uno1:7", "gold", [ "v48", "h326.2", "v57.6" ] ],
+    [ "keypad1:R2", "uno1:9", "gold", [ "v67.2", "h326", "v38.4" ] ],
+    [ "keypad1:R3", "uno1:8", "gold", [ "v57.6", "h326.1" ] ],
+    [ "keypad1:R1", "uno1:10", "gold", [ "v76.8", "h326.4", "v19.2" ] ],
+    [ "keypad1:C2", "uno1:5", "blue", [ "v28.8", "h326.4" ] ],
+    [ "keypad1:C3", "uno1:4", "blue", [ "v19.2", "h326.25" ] ],
+    [ "keypad1:C4", "uno1:3", "blue", [ "v9.6", "h335.7" ] ],
+    [ "uno1:GND.3", "bb1:bn.25", "black", [ "v19.1", "h-216.8" ] ],
+    [ "bb1:bp.25", "uno1:5V", "red", [ "v8.7", "h203.2" ] ],
+    [ "ring1:GND", "bb1:bn.18", "black", [ "v9.6", "h-48" ] ],
+    [ "ring1:VCC", "bb1:bp.19", "red", [ "v19.2", "h-96" ] ],
+    [ "ring1:DIN", "bb1:24b.j", "green", [ "v28.8", "h-86.4" ] ],
+    [ "bb1:30b.f", "uno1:2", "green", [ "v-134.4", "h432" ] ],
+    [ "uno1:11", "bb1:18t.a", "orange", [ "v-12.86", "h-449.41" ] ],
+    [ "bb1:16b.j", "bb1:bn.13", "black", [ "v0" ] ],
+    [ "uno1:12", "bb1:14t.a", "orange", [ "v-22.46", "h-468.71" ] ],
+    [ "bb1:12b.j", "bb1:bn.10", "black", [ "v0" ] ],
+    [ "r1:1", "bb1:24b.g", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:30b.g", "", [ "$bb" ] ],
+    [ "btn1:1.l", "bb1:18t.e", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:16t.e", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:18b.f", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:16b.f", "", [ "$bb" ] ],
+    [ "btn2:1.l", "bb1:14t.e", "", [ "$bb" ] ],
+    [ "btn2:2.l", "bb1:12t.e", "", [ "$bb" ] ],
+    [ "btn2:1.r", "bb1:14b.f", "", [ "$bb" ] ],
+    [ "btn2:2.r", "bb1:12b.f", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
